@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery1</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="heading">
+            <h3>Photo Gallery</h3>
+        </div>
+        <div class="box">
+            <div class="dream" id="image-gallery">
+
+                <script>
+                    const imageGallery = document.getElementById('image-gallery');
+                    const imageCount = 5;
+                    const imagePath = 'images/';
+
+                    for (let i = 0; i < 3; i++) {
+                        for (let j = 1; j <= imageCount; j++) {
+                            const img = document.createElement('img');
+                            img.src = '${imagePath}/image${i}.jpg';
+                            img.alt = 'Image ${i}';
+                            imageGallery.appendChild(img);
+                        }
+                    }
+
+                </script>
+
+                
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!-- <img src="images/image2.jpg" alt="Fira, Greece">
+                <img src="images/image4.jpeg" alt="Kigali, Rwanda">
+                <img src="images/image5.png" alt="Kyoto, Japan">
+                <img src="images/image84.jpg" alt="Tromso, Norway">
+                <img src="images/image95.jpg" alt="Zanzibar, Tanzania">
+                <img src="images/image1.jpg" alt="Bali, Indonesia">
+                <img src="images/image3.jpg" alt="KalahariDesert, SA">
+                <img src="images/image6.png" alt="Male, Maldives">
+                <img src="images/image7.jpeg" alt="MauForest, Kenya"> -->
