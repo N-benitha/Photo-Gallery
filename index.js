@@ -1,7 +1,7 @@
 const imageGallery = document.getElementById('image-gallery');
 const imagePath = `images`;
 
-//Predefined st of captions
+//Predefined set of captions
 const captions = [
     {city: "Bali", country: "Indonesia", showMore: "Show more"},
     {city: "Fira", country: "Greece", showMore: "Show more"},
@@ -19,7 +19,7 @@ captions.forEach((caption, index) => {
     img.alt = `${caption.city}, ${caption.country}`;
 
     const captionContainer = document.createElement('div');
-    captionConatiner.className = 'caption';
+    captionContainer.className = 'caption';
     
     const city = document.createElement('span');
     city.textContent = caption.city;
@@ -29,15 +29,38 @@ captions.forEach((caption, index) => {
     country.textContent = `, ${caption.country}`;
     country.className = 'country';
 
-    const showMore = document.createElement('span');
-    city.textContent = ` - ${caption.showMore}`;
-    city.className = 'show-more';
+    const showMore = document.createElement('div');
+    showMore.textContent = `${caption.showMore}`;
+    showMore.className = 'show-more';
+
+    const arrow = document.createElement('i');
+    arrow.className = 'fa-solid fa-arrow-right';
 
     captionContainer.appendChild(city);
     captionContainer.appendChild(country);
     captionContainer.appendChild(showMore);
+    captionContainer.appendChild(arrow);
 
     imgContainer.appendChild(img);
     imgContainer.appendChild(captionContainer);
     imageGallery.appendChild(imgContainer);
+
+    //Add click event to open a gallery image
+    img.onclick = function() {
+        const gallery = document.getElementById("myGallery");
+        const gallerImg = document.getElementById("imageX");
+        const captionText = document.getElementById("caption");
+        gallery.style.display = "block";
+        gallerImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
 });
+
+//get the span element that closes a gallery image
+const span = document.getElementsByClassName("close")[0];
+
+//when the user clicks on <span> (x), close the image opened
+span.onclick = function() {
+    const gallery = document.getElementById("myGallery");
+    gallery.style.display = "none";
+}
