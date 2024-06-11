@@ -46,21 +46,21 @@ captions.forEach((caption, index) => {
     imageGallery.appendChild(imgContainer);
 
     //Add click event to open a gallery image
-    img.onclick = function() {
+    imgContainer.addEventListener ('click' , () => {
         const gallery = document.getElementById("myGallery");
         const gallerImg = document.getElementById("imageX");
         const captionText = document.getElementById("caption");
         gallery.style.display = "block";
-        gallerImg.src = this.src;
-        captionText.innerHTML = this.alt;
-    }
+        gallerImg.src = img.src;
+        captionText.innerHTML = img.alt;
+    });
 });
 
 //get the span element that closes a gallery image
-const span = document.getElementsByClassName("close")[0];
+const closeImag = document.querySelector('.close');
 
 //when the user clicks on <span> (x), close the image opened
-span.onclick = function() {
+closeImag.addEventListener('click', () => {
     const gallery = document.getElementById("myGallery");
     gallery.style.display = "none";
-}
+});
