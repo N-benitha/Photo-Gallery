@@ -1,4 +1,4 @@
-function hasSubarrayWithSum(array, target) {
+function arrayMap(array, target) {
     let start = 0;
     let presentSum = 0;
     
@@ -24,7 +24,7 @@ const target1 = 17;
 const target2 = 3;
 const target3 = 20;
 const target4 = 13;
-console.log(hasSubarrayWithSum(arr, target1));  // Output: true
-console.log(hasSubarrayWithSum(arr, target2));  // Output: false
-console.log(hasSubarrayWithSum(arr, target3));  // Output: false
-console.log(hasSubarrayWithSum(arr, target4));  // Output: true
+console.log(arrayMap(arr, target1));  // Output: true
+console.log(arrayMap(arr, target2));  // Output: false
+console.log(arrayMap(arr, target3));  // Output: false
+console.log(arrayMap(arr, target4));  // Output: true

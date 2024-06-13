@@ -1,4 +1,4 @@
-function transformString(s) {
+function stringTransform(s) {
     const len = s.length;
     let transformed = '';
     
@@ -27,7 +27,10 @@ function transformString(s) {
 }
 
 // Example usage:
-console.log(transformString("Code of Africa"));  // Output: Code of Africa
-console.log(transformString("school"));          // Output: loohcs
-console.log(transformString("12345"));           // Output: 4950515253
-console.log(transformString("abcdefghijklmno")); // Output: 111110109108107106105104103102101100999897
+console.log(stringTransform("Code of Africa"));  // Output: Code of Africa
+console.log(stringTransform("school"));          // Output: loohcs
+console.log(stringTransform("12345"));           // Output: 4950515253
+console.log(stringTransform("abcdefghijklmno")); // Output: 111110109108107106105104103102101100999897
+console.log(stringTransform("Hamburger"));       // Output: regrubmaH
+console.log(stringTransform("Pizza"));           // Output: 8010512212297
+console.log(stringTransform("Chocolate Chip Cookie")); // Output: eikooC pihC etalocohC
